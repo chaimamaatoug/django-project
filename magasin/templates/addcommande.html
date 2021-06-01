@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+ <div class="col-md-12 text-center">
+ </div>
+ <form method='POST' class="post-form" enctype="multipart/form-data">
+    {% csrf_token %}
+ {{ form.as_p }}
+ <button type="submit" class="btn btn-default">Enregistrer</button>
+ </form>
+{% endblock %}

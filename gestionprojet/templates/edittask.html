@@ -1,0 +1,12 @@
+{% extends 'basee.html'%}
+{%block body%}
+<div class="container mt-5">
+    {{proj}}
+    <form class="form-inline mt-5" method="post">
+        {% csrf_token %}
+            <input type="text" name="name" value="{{proj.name}}">
+            <textarea name="descr">{{proj.descr}}</textarea>
+            <input type="submit" name="btn" class="btn btn-warning" value="edit Task">
+        </form>
+</div>
+{%endblock%}

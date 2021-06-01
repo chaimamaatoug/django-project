@@ -1,0 +1,10 @@
+{% extends 'basee.html'%}
+{%block body%}
+<div class="container mt-5">
+    <form class="form-inline mt-5" method="post">
+        {% csrf_token %}
+            {{form.as_table}}
+            <input type="submit" name="btn" class="btn btn-success" value="Add project">
+        </form>
+</div>
+{%endblock%}
